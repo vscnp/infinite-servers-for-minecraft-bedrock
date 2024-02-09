@@ -201,9 +201,6 @@ bool AddServers::AddServerToList(const std::wstring& path, HWND hWnd) {
     GetWindowText(hTextBox1, serverName, sizeof(serverName) / sizeof(serverName[0]));
     GetWindowText(hTextBox2, serverAddress, sizeof(serverAddress) / sizeof(serverAddress[0]));
     GetWindowText(hTextBox3, portText, sizeof(portText) / sizeof(portText[0]));  
-    MessageBox(hWnd, serverName, L"Info", MB_OK | MB_ICONINFORMATION);
-    MessageBox(hWnd, serverAddress, L"Info", MB_OK | MB_ICONINFORMATION);
-    MessageBox(hWnd, portText, L"Info", MB_OK | MB_ICONINFORMATION);
 
     std::wofstream outputFile(path, std::ios::app);
     if (outputFile.is_open()) {
